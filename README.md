@@ -1,12 +1,12 @@
 # Ladies In Tech Africa SQL Projects
 ## Table of Contents
--[Project Review](#project-review)
--[Tools Used](#tools-used)
--[SQL Queries](#sql-queries)
--[Example SQL file (queries.sql)](#example-sql-file-(queries.sql))
--[Projects](#projects)
--[Contact](#contact)
--[Acknowledgments](#acknowledgments)
+- [Project Review](#project-review)
+- [Tools Used](#tools-used)
+- [SQL Queries](#sql-queries)
+- [Example SQL file (queries.sql)](#example-sql-file-(queries.sql))
+- [Projects](#projects)
+- [Contact](#contact)
+- [Acknowledgments](#acknowledgments)
 
 ## Project Review
 This repository contains SQL projects completed during the Ladies in Tech Africa SQL class. The projects demonstrate various SQL concepts, including SELECT statements, JOINs, UNIONs, views, and CASE statements.
@@ -32,6 +32,7 @@ This repository contains SQL projects completed during the Ladies in Tech Africa
 - Entity-relationship diagram
 
   ## Example SQL file (queries.sql)
+  ```
   -- SELECT statements
 SELECT * FROM EMPLOYEE;
 SELECT * FROM SALARY;
@@ -53,6 +54,7 @@ SELECT Staffid, firstname, Gender, state_of_origin, Age,
            ELSE 'Unknown'
        END AS AgeGroup
 FROM [dbo].[Employee];
+```
   
 ## Projects
 - Employee Database

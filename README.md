@@ -32,7 +32,7 @@ This repository contains SQL projects completed during the Ladies in Tech Africa
 - Entity-relationship diagram
 
   ## Example SQL file (queries.sql)
-  ```
+```
   -- SELECT statements
 SELECT * FROM EMPLOYEE;
 SELECT * FROM SALARY;

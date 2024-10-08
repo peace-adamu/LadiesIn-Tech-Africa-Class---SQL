@@ -1,0 +1,299 @@
+----------------19/09/2024----------------
+
+---List operator------------------
+--IN
+--NOT IN
+
+SELECT * FROM EMPLOYEE
+WHERE FIRSTNAME IN ('SANNI', 'DEBORAH', 'MERCY')
+
+SELECT * FROM Salary
+WHERE department IN ('ACCOUNT', 'LOGISTICS','HUMAN RESOURCES')
+
+SELECT * FROM Salary
+WHERE department NOT IN 
+('ACCOUNT', 'LOGISTICS','HUMAN RESOURCES')
+
+----------LOGICAL OPERATORS----------------------
+----AND
+---OR
+
+SELECT * FROM EMPLOYEE
+WHERE FIRSTNAME = 'JUSTIN'
+
+SELECT * FROM EMPLOYEE
+WHERE FIRSTNAME = 'JUSTIN' AND GENDER = 'FEMALE'
+
+SELECT * FROM EMPLOYEE
+WHERE FIRSTNAME = 'JOHNSON' AND GENDER = 'FEMALE'
+
+----OR
+
+SELECT * FROM EMPLOYEE
+WHERE FIRSTNAME = 'JUSTIN' OR GENDER = 'FEMALE'
+
+SELECT * FROM  EMPLOYEE
+WHERE GENDER = 'MALE' AND DATE_OF_BIRTH <= '1990-01-01'
+AND STATE_OF_ORIGIN = 'LAGOS'
+
+SELECT * FROM  EMPLOYEE
+WHERE GENDER = 'MALE' AND DATE_OF_BIRTH >= '1990-01-01'
+AND STATE_OF_ORIGIN = 'LAGOS'
+
+
+
+SELECT * FROM EMPLOYEE
+WHERE FIRSTNAME = 'JOHNSON' OR GENDER = 'GIRL,'
+
+SELECT * FROM EMPLOYEE
+WHERE FIRSTNAME = 'FEMI' OR GENDER = 'GIRL,'
+
+-------UPDATE--------
+
+SELECT * FROM Salary
+
+UPDATE Salary
+SET FIRSTNAME = 'Emeka'
+where Staffid = 'AB212'
+
+UPDATE SALARY SET STAFFID = 'AB550' WHERE STAFFID = 'AB254'
+
+---SALARY = 5% (0.05)
+
+UPDATE SALARY
+SET SALARY = SALARY +(SALARY * 0.05)
+WHERE STAFFID IN ('AB200', 'AB268','AB278')
+
+UPDATE SALARY
+SET SALARY = SALARY * 1.05
+WHERE STAFFID IN ('AB200', 'AB268','AB278')
+
+UPDATE SALARY
+SET SALARY = SALARY * (1 + 0.05)
+WHERE STAFFID IN ('AB200', 'AB268','AB278')
+
+SELECT * FROM Salary
+
+--------------JOIN-----------------------
+
+INNER JOIN
+LEFT JOIN
+RIGHT JOIN
+FULL JOIN
+
+SELECT * FROM EMPLOYEE
+SELECT * FROM SALARY
+SELECT * FROM PAYMENT 
+
+-----JOIN 2 TABLES----------------
+ --EMPLOYEE  =  7 COLUMNS ( STAFFID, FIRSTNAME, GENDER, HIREDATE, STATE)
+ --SALARY  = 6 COLUMNS (DEPARTMENT, SALARY)
+
+ select employee.staffid, employee.firstname, employee.gender,
+			 employee.hiredate,employee.state_of_origin, Salary.department,
+			 Salary.salary
+from employee
+join Salary
+on salary.Staffid = employee.staffid
+
+
+-------inner join----------------
+ select employee.staffid, employee.firstname, employee.gender,
+			 employee.hiredate,employee.state_of_origin, Salary.department,
+			 Salary.salary
+from employee
+join Salary
+on salary.Staffid = employee.staffid
+
+
+
+-------left join---------------------
+
+ select employee.staffid, employee.firstname, employee.gender,
+			 employee.hiredate,employee.state_of_origin, Salary.department,
+			 Salary.salary
+from employee
+left join Salary
+on salary.Staffid = employee.staffid
+
+-------right join---------------
+ select employee.staffid, employee.firstname, employee.gender,
+			 employee.hiredate,employee.state_of_origin, Salary.department,
+			 Salary.salary
+from employee
+right join Salary
+on salary.Staffid = employee.staffid
+
+-----full join---------------------
+
+ select employee.staffid, employee.firstname, employee.gender,
+			 employee.hiredate,employee.state_of_origin, Salary.department,
+			 Salary.salary
+from employee
+full join Salary
+on salary.Staffid = employee.staffid
+
+------join 3 tables-------------------
+
+select employee.staffid,
+           employee.firstname, 
+		   employee.gender,
+		   employee.hiredate,
+			employee.state_of_origin,
+			Salary.department,
+			 Salary.salary,
+			 Payment.Account_No,
+			 Payment.Bank,
+			 Payment.Payment_Method
+from employee
+inner join Salary
+on salary.Staffid = employee.staffid
+inner join Payment
+on Payment.staffid = salary.Staffid
+
+
+-------------------
+select p.staffid, 
+           p.firstname, 
+		   p.gender,
+			 p.hiredate,
+			 p.state_of_origin, 
+			 a.department,
+			 a.salary
+from employee p
+join Salary a
+on a.Staffid = p.staffid
+
+------union vs union all
+create table  LITA_Store_Lekki (
+customerID INT not null,
+firstname varchar (max),
+lastname  varchar (max),
+Customer_gender nvarchar(max),
+age int,
+address varchar (max),
+transaction_amount decimal (18, 4)
+)
+
+insert into LITA_Store_Lekki(customerID,firstname, lastname, Customer_gender, age, address, transaction_amount)
+values ( 100, 'ramesh', 'abdukl', 'male', 24, '8 ahmed road', 2000.00),
+   (121,'khilan', 'delhi', 'female',33, '9 delhi stree, okun', 1500.33),
+    (111,'malik', 'delhi', 'female',39, '2 agriiv stree, makunn', 1999.33),
+	 (110, 'kara', 'ogun', 'male',40, '10 hahroh road, ottawa', 3400.33),
+	  (109,'sunkanmi','alade','male', 44, '9 orebiyi street, okun', 37575.00),
+	   (108,'orobiyi', 'kekerekun', 'male',24, '88 malele road, ijebu', 6500.33),
+	    (115,'igbati', 'bunmi', 'male',29, '90 delhi street, abeokunta', 1000.69),
+		 (120,'mummry', 'akinbho','female', 25, '9 babaoluwa quarter, ipaha', 9000.50),
+		  (119,'latana', 'jerremy', 'male',33, '9 ifelofudn quarter, ado', 15090.35),
+		    (108,'orobiyi', 'kekerekun', 'male',24, '88 malele road, ijebu', 6500.33),
+			 (111,'malik', 'delhi', 'female',39, '2 agriiv stree, makunn', 1999.33)
+ 
+select * from LITA_Store_Lekki
+
+create table  LITA_Store_Marina (
+customerID INT not null,
+firstname varchar (max),
+lastname  varchar (max),
+Customer_gender nvarchar(max),
+age int,
+address varchar (max),
+transaction_amount decimal (18, 4)
+)
+
+insert into LITA_Store_Marina( customerID,firstname, lastname, Customer_gender, age,address, transaction_amount)
+values ( 200,'Femk', 'abdukl',  'male',24, '9 old road', 88000.00),
+   (201, 'isaiah', 'john','male', 55, '22 alaly stree, okun', 1590.33),
+    ( 206,'emma', 'abu','male', 39, '7 ababa street, makunn', 6788.33),
+	 (210, 'kara', 'ogun','female' ,40, '10 hahroh road, ottawa', 3400.33),
+	  ( 211,'sunkanmi', 'osagie', 'female' ,49, '9 agric butstop street, okun', 89875.00),
+	   (209,'oge', 'kunle', 'male',88, '10 iwo street, liverpool', 7860.33),
+	    (204, 'igbayin', 'elizabeth', 'female',78, '100 kukuma street, epe', 89100.69),
+		 (219,'mummry', 'akinbho','female', 25, '9 babaoluwa quarter, ipaha', 9000.50),
+		  (220,'latana', 'jerremy','male', 33, '9 ifelofudn quarter, ado', 15090.35),
+		  (216, 'marvelous', 'jerremy', 'female',96, '9 jo grey quarter, igbo', 53590.35),
+		   (210, 'kara', 'ogun','female' ,40, '10 hahroh road, ottawa', 3400.33),
+	  ( 211,'sunkanmi', 'osagie', 'female' ,49, '9 agric butstop street, okun', 89875.00),
+	   ( 206,'emma', 'abu','male', 39, '7 ababa street, makunn', 6788.33)
+
+-------union all------
+	select * from LITA_Store_Lekki
+	union all
+	select * from LITA_Store_Marina
+
+	------union-----------
+select  customerID, Customer_gender, transaction_amount
+from LITA_Store_Lekki
+union 
+select customerID, Customer_gender, transaction_amount
+from LITA_Store_Marina
+
+
+select * from LITA_Store_Lekki
+union all
+select * from LITA_Store_Marina
+
+select 'Lekki Store' as [BRANCHES], customerID AS [CUSTOMERID],
+           firstname as [FIRST NAME], lastname as [LAST NAME], 
+		   customer_gender as [GENDER],age as AGE, address as [ADDRESS], 
+		   transaction_amount as [TRANSACTION AMOUNT]
+FROM LITA_Store_Lekki
+UNION ALL
+select 'Marina Store' as [BRANCHES], customerID AS [CUSTOMERID],
+           firstname as [FIRST NAME], lastname as [LAST NAME], 
+		    customer_gender as [GENDER], age as AGE, address as [ADDRESS], 
+		   transaction_amount as [TRANSACTION AMOUNT]
+from LITA_Store_Marina
+
+
+-------------------------------------------24/09/2024------------------------------
+
+-------------------SQL VIEWS--------------------------------
+select * from employee
+
+create view vw_Employee_tbl
+as
+SELECT STAFFID, firstname, gender, hiredate from employee
+
+select * from vw_Employee_tbl
+
+select * from [dbo].[vw_LITA_Store_Transaction_tbl]
+
+select * from [dbo].[vw_LITA_Store_Transaction_tbl2]
+
+create view vw_LITA_Employee_Info 
+as
+select employee.staffid,
+        employee.firstname, 
+	employee.secondname,
+        employee.gender,
+	employee.hiredate,
+	employee.state_of_origin,
+	Salary.department,
+	Salary.salary,
+	Payment.Account_No,
+	Payment.Bank,
+	Payment.Payment_Method
+from employee
+inner join Salary
+on salary.Staffid = employee.staffid
+inner join Payment
+on Payment.staffid = salary.Staffid
+
+select * from [dbo].[vw_LITA_Employee_Info]
+
+-------SQL CASE WHEN-------------------------
+SELECT * FROM EMPLOYEE
+
+ALTER TABLE EMPLOYEE
+ADD AGE AS DATEDIFF(YEAR, Date_of_Birth, Hiredate) -
+   CASE
+       WHEN MONTH(Hiredate) < month(Date_of_birth)
+	   OR (MONTH(Hiredate) = month(Date_of_birth)
+	   AND DAY(Hiredate) < DAY(Date_of_birth))
+	THEN 1
+	ELSE 0
+END
+
+-------------
+ALTER TABLE EMPLOYEE
+ADD AGE AS datediff( year, Date_of_Birth, Hiredate)

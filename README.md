@@ -55,6 +55,7 @@ SELECT Staffid, firstname, Gender, state_of_origin, Age,
        END AS AgeGroup
 FROM [dbo].[Employee];
 ```
+
   
 ## Projects
 - Employee Database

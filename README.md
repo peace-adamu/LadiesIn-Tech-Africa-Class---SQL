@@ -1,12 +1,17 @@
 # Ladies In Tech Africa SQL Projects
 ## Table of Contents
+- [Acknowledgments](#acknowlegments)
 - [Project Review](#project-review)
 - [Tools Used](#tools-used)
 - [SQL Queries](#sql-queries)
 - [Example SQL file (queries.sql)](#example-sql-file-(queries.sql))
 - [Projects](#projects)
-- [Contact](#contact)
-- [Acknowledgments](#acknowledgments)
+- 
+
+## Acknowledgment 
+I would like to express my deepest gratitude to the following individuals and organizations for their support and guidance throughout this project:
+First and foremost, I acknowledge the Ladies in Tech African organization for providing the platform and resources necessary to develop my skills in Excel and data analysis. Their commitment to empowering women in technology is truly inspiring.
+I would also like to extend my sincere appreciation to my tutor, Mr. Femi Ayodele his expertise, patience, and dedication were instrumental in my success. His guidances were invaluable, and I am grateful for the opportunity to learn from him.
 
 ## Project Review
 This repository contains SQL projects completed during the Ladies in Tech Africa SQL class. The projects demonstrate various SQL concepts, including SELECT statements, JOINs, UNIONs, views, and CASE statements.

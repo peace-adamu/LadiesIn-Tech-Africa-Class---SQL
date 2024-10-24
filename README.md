@@ -223,9 +223,9 @@ END;
 ```
 #### International Breweries Analysis
 -- INTERNATIONAL BWEWERIES----
-
+```
 SELECT * FROM [dbo].[International_Breweries]
-
+```
 - To  get the total profit
 ```
 SELECT SUM(profit) AS TotalProfit 

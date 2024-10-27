@@ -1,4 +1,4 @@
-# Ladies In Tech Africa SQL Projects
+# Ladies In Tech Africa SQL Projects ![-5808992407017075915_121](https://github.com/user-attachments/assets/9600236c-29e3-4372-b361-82a89e8204f0)
 ## Table of Contents
 - [Acknowledgments](#acknowlegments)
 - [Project Preview](#project-preview)

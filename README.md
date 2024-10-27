@@ -1,4 +1,4 @@
-# Ladies In Tech Africa SQL Projects ![-5808992407017075915_121](https://github.com/user-attachments/assets/9600236c-29e3-4372-b361-82a89e8204f0)
+# Ladies In Tech Africa SQL Project ![-5808992407017075915_121](https://github.com/user-attachments/assets/9600236c-29e3-4372-b361-82a89e8204f0)
 ## Table of Contents
 - [Acknowledgments](#acknowlegments)
 - [Project Preview](#project-preview)
@@ -29,14 +29,11 @@
 
 ## Acknowledgment 
 I would like to express my deepest gratitude to the following individuals and organizations for their support and guidance throughout this project:
-First and foremost, I acknowledge the Ladies in Tech African organization for providing the platform and resources necessary to develop my skills in SQL and data analysis. Their commitment to empowering women in technology is truly inspiring.
+First and foremost, I acknowledge the Ladies in Tech Africa organization for providing the platform and resources necessary to develop my skills in SQL and data analysis. Their commitment to empowering women in technology is truly inspiring.
 I would also like to extend my sincere appreciation to my tutor, Mr. Femi Ayodele his expertise, patience, and dedication were instrumental in my success. His guidances were invaluable, and I am grateful for the opportunity to learn from him.
 
 ## Project Preview
-The "Ladies in Tech" project aims to demonstrate basic SQL skills by creating a database, designing tables, and performing CRUD (Create, Read, Update, Delete) operations, creating views, joining tables and obtaining key insight from international breweries dataset.
-
-#### Project Review
-This project involves designing and managing a SQL database, including the creation of tables and execution of various SQL queries to perform data manipulation and retrieval.
+The "Ladies in Tech" project aims to demonstrate basic SQL skills by creating a database, designing tables, and performing CRUD (Create, Read, Update, Delete) operations, creating views, joining tables and obtaining key insight from international breweries dataset and execution of various SQL queries to perform data manipulation and retrieval.
 
 #### Project Highlights
 This project showcases fundamental SQL skills, including table creation, data insertion, updating, deletion, and the use of advanced queries. The effective use of SQL queries extracts key metrics, enabling thorough data analysis and informed decision-making.
@@ -300,6 +297,7 @@ The SQL project encompassed various foundational and advanced database managemen
 
 ## Contact
 #### Adamu Peace
+- Tel: 09069668265
 - Email: peacejoadamu@gmail.com
 - LinkedIn: https://www.linkedin.com/in/peace-adamu-34576b23a
 
